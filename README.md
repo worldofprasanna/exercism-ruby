@@ -23,6 +23,12 @@ bundle install
 
 ```
 bundle exec guard
+
+# Download the problem. Eg:
+exercism download --exercise=acronym --track=ruby
+
+# Upload the solution. Eg:
+exercism submit ./acronym/acronym.rb
 ```
 
 ## Maintainers
