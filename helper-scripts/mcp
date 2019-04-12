@@ -1,0 +1,22 @@
+#!/usr/bin/ruby
+# cp source_f_or_d target_f_or_d
+
+require 'fileutils'
+#$stdout.reopen("out.txt", "w")
+#$stderr.reopen("err.txt", "w")
+
+source = ARGV[0]
+dest = ARGV[1]
+
+def copy_files(source, dest)
+	Dir.entries(source).each do |f|
+		FileUtils.cp(f, dest) if File.file? f
+	end
+end
+
+if File.directory?(source)
+	FileUtils::mkdir_p dest
+	copy_files(source, dest)
+else
+	FileUtils.cp(source, dest)
+end
