@@ -14,6 +14,6 @@ class ResistorColorDuo
     'white' =>'9'
   }
   def self.value(input_arr)
-    input_arr.reduce('') { |acc, val| acc + (COLOR_MAPPER[val] || '') }.to_i
+    # input_arr.reduce('') { |acc, val| acc + (COLOR_MAPPER[val] || '') }.to_i
   end
 end
